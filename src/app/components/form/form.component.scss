@@ -1,0 +1,56 @@
+.aligned-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  min-width: 712px;
+  max-width: 712px;
+  min-height: 512px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 46px;
+
+  .title {
+    color: var(--green);
+    font-weight: 600;
+    font-size: 18px;
+    font-family: "Archivo Narrow", sans-serif;
+  }
+
+  button {
+    background-color: transparent;
+    border-width: 0;
+    font-size: 14px;
+    margin: 0 6px;
+    padding: 7px 9px;
+    border-radius: 5px;
+
+    &:hover {
+      font-weight: 500;
+    }
+
+    &.cancel {
+      color: var(--red);
+      &:hover {
+        background-color: var(--red);
+        color: white;
+      }
+    }
+    &.save {
+      color: var(--save-btn-green);
+      &:hover {
+        background-color: var(--save-btn-green);
+        color: white;
+      }
+    }
+  }
+}

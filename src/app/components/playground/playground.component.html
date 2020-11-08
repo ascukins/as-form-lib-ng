@@ -1,0 +1,34 @@
+<br />
+<br />
+<div class="card">
+  <div>
+    <button (click)="formService.resetJson()">
+      Load multi-section test JSON
+    </button>
+  </div>
+  <div>
+    <input
+      type="text"
+      class="form-control"
+      value="https://ascukins.github.io/form-lib/assets/data.json"
+      [(ngModel)]="formService.jsonPath"
+    />
+    <button
+      style="margin-right: 1px"
+      type="button"
+      class="btn btn-outline-primary border-0"
+      (click)="loadJson()"
+    >
+      Load JSON
+    </button>
+  </div>
+  <div>
+    {{ warning }}
+  </div>
+</div>
+<br />
+
+<app-form
+  [formWidget]="formService.widgets.widgets[0]"
+  *ngIf="formService.widgets?.widgets?.length"
+></app-form>

@@ -1,0 +1,22 @@
+.input {
+  position: relative;
+  font-size: 16px;
+  .prefix {
+    position: absolute;
+    top: 18px;
+    left: 10px;
+  }
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 5px;
+    padding: 12px 16px;
+    padding-left: 23px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 3px;
+    &:required {
+      border-left: solid 2px var(--green);
+    }
+  }
+}

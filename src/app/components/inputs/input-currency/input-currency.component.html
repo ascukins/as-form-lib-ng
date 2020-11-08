@@ -1,0 +1,13 @@
+<label
+  >{{ formItem.label }}
+  <div class="input">
+    <input
+      type="number"
+      [(ngModel)]="formItem.value"
+      [required]="formItem.required"
+      [step]="numberStep"
+      (keyup)="roundValueToPrecision()"
+    />
+    <div class="prefix">{{ currencyCode }}</div>
+  </div>
+</label>

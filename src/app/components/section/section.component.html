@@ -1,0 +1,20 @@
+<div class="section">
+  <div class="section-header">{{ formSection.header }}</div>
+  <div
+    class="section-content-container"
+    [style]="'grid-template-columns: repeat(' + gridColumns + ', 1fr);'"
+  >
+    <div class="field" *ngFor="let control of formSection.items">
+      <ng-container [ngSwitch]="control.type">
+        <app-input-text
+          *ngSwitchCase="'input'"
+          [formItem]="control"
+        ></app-input-text>
+        <app-input-currency
+          *ngSwitchCase="'currency'"
+          [formItem]="control"
+        ></app-input-currency>
+      </ng-container>
+    </div>
+  </div>
+</div>
