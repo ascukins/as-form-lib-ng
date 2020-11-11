@@ -11,7 +11,11 @@ export class InputCurrencyComponent implements OnChanges {
 
   @Input() formItem: FormItem;
 
-  currencyCode: string;
+  CurrencyPrefixes = {
+    EUR: '€',
+    USD: '$'
+  };
+
   numberStep: number;
 
   roundValueToPrecision(): void {
@@ -29,19 +33,8 @@ export class InputCurrencyComponent implements OnChanges {
     this.numberStep = Math.pow(10, -this.formItem.precision);
   }
 
-  calculatePrefixSymbol(): void {
-    if (this.formItem.symbol === 'EUR') {
-      this.currencyCode = '€';
-    } else if (this.formItem.symbol === 'USD') {
-      this.currencyCode = '$';
-    } else {
-      this.currencyCode = '';
-    }
-  }
-
   ngOnChanges(): void {
     this.calculatePrecision();
-    this.calculatePrefixSymbol()
   }
 
 }

@@ -8,6 +8,6 @@
       [step]="numberStep"
       (keyup)="roundValueToPrecision()"
     />
-    <div class="prefix">{{ currencyCode }}</div>
+    <div class="prefix">{{ CurrencyPrefixes[formItem.symbol] || "" }}</div>
   </div>
 </label>
